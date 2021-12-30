@@ -1,23 +1,189 @@
 @charset "utf-8";
 
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
 /* .layout .left{border: 1px solid red; float: left; width: 10%; height: 100%; position: fixed; overflow: hidden;}
 .content{border: 1px solid blue; height: 100%; position: relative;} 
 
 .layout div{ display: table; float: left; border: 1px solid red; height: 100%; width: 100%; position: fixed;}
 */
 
-.layout .left {
+* {
+    box-sizing: border-box;
+}
+
+#menu {
+    background-color: aquamarine;
     display: block;
     position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    width: 23%;
-    min-width: 320px;
+    width: 10%;
     height: 100%;
-    min-height: 100%;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-    transition: width ease-in-out 0.2s;
+}
+
+#nav {
+    padding: 0 0 0 10%;
+    height: 100%;
+    display: block;
+}
+
+#main .nav {
+    background-color: blueviolet;
+    height: 50px;
+}
+
+#main .board {
+    background-color: cornsilk;
+    height: 100vh;
+}
+
+#main footer {
+    height: 250px;
+}
+
+#main footer .f1 {
+    background-color: darkblue;
+    float: left;
+    width: 50%;
+    height: 250px;
+}
+
+#main footer .f2 {
+    background-color: rgb(45, 197, 45);
+    float: right;
+    width: 50%;
+    height: 250px;
 }
