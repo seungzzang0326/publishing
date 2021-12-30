@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS 설정 -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/fullPage.css'>
+    <link rel="stylesheet" type="text/css" href="css/fullPage/jquery.fullPage.css" />
+
+    <!-- script 설정 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="css/fullPage/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="css/fullPage/dist/jquery.fullpage.extensions.min.js"></script>
+    <script type="text/javascript" src="css/fullPage/vendors/scrolloverflow.min.js"></script>
+
+    <!-- 타이틀 -->
+    <title>fullPage</title>
+</head>
+
+<body>
+    <div>
+        <div id="menu">menu</div>
+        <div id="main">
+            <div class="nav">nav</div>
+            <div class="board">
+                <div id="fullpage">
+                    <div class="section">Some section1</div>
+                    <div class="section">Some section2</div>
+                    <div class="section">Some section3</div>
+                    <div class="section">Some section4</div>
+                </div>
+            </div>
+            <footer>
+                <div class="f1">footer1</div>
+                <div class="f2">footer2</div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            //options
+            autoScrolling: true,
+            scrollHorizontally: true,
+            scrollOverflow: true,
+            sectionsColor: ['#FFCCCC', '#FFFFCC', '#CCFFFF', '#CC99FF']
+        });
+
+        //methods
+        $.fn.fullpage.setAllowScrolling(true);
+    });
+</script>
+
+</html>
