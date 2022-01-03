@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS 설정 -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/fullPage.css'>
+    <link rel="stylesheet" type="text/css" href="css/fullPage/jquery.fullPage.css" />
+
+    <!-- script 설정 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="css/fullPage/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="css/fullPage/dist/jquery.fullpage.extensions.min.js"></script>
+    <script type="text/javascript" src="css/fullPage/vendors/scrolloverflow.min.js"></script>
+
+    <!-- 타이틀 -->
+    <title>menu</title>
+</head>
+
+<body>
+    <div>
+        <div class="menu">
+            <div class="logo">
+                <a href="/menu.html"><img src="/img/애플 로고.jpg"></a>
+            </div>
+            <ul>
+                <li class="menu_s">
+                    <a href="/move.html">
+                        <div class="menu_s_1"><img src="/img/test.gif" alt=""><br>회사소개</div>
+                    </a>
+                </li>
+                <li class="menu_s">
+                    <a href="/move.html">
+                        <div class="menu_s_1"><img src="/img/test.gif" alt=""><br>서비스소개</div>
+                    </a>
+                </li>
+                <li class="menu_s">
+                    <a href="/move.html">
+                        <div class="menu_s_1"><img src="/img/test.gif" alt=""><br>포트폴리오</div>
+                    </a>
+                </li>
+                <li class="menu_s">
+                    <a href="/move.html">
+                        <div class="menu_s_1"><img src="/img/test.gif" alt=""><br>상담문의</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="board">
+            <div id="fullpage">
+                <div class="section">
+                    <div class="nav">nav</div>
+                    <div class="content">Some section1</div>
+                </div>
+                <div class="section">Some section2</div>
+                <div class="section">Some section3</div>
+                <div class="section">Some section4</div>
+                <!-- fp-auto-height : 자동으로 페이지 길이 맞춰줌 -->
+                <div class="section fp-auto-height">
+                    <footer>
+                        <div class="f1">footer1</div>
+                        <div class="f2">footer2</div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            //options
+            autoScrolling: true,
+            scrollHorizontally: true,
+            scrollOverflow: true,
+            sectionsColor: ['#FFCCCC', '#FFFFCC', '#CCFFFF', '#CC99FF'],
+            //마지막페이지에서 첫페이지로 가는 여부
+            loopBottom: true
+        });
+
+        //methods
+        //$.fn.fullpage.setAllowScrolling(false);
+    });
+</script>
+
+</html>
