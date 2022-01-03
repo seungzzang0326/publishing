@@ -2,8 +2,24 @@
 
 /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
 
-html body div span applet object iframe,
-h1 h2 h3 h4 h5 h6 p blockquote pre a abbr,
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
 acronym,
 address,
 big,
@@ -126,6 +142,32 @@ table {
 .layout div{ display: table; float: left; border: 1px solid red; height: 100%; width: 100%; position: fixed;}
 */
 
+
+/* 웹폰트 적용
+@font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SDSamliphopangche_Outline';
+}
+*/
+
+
+/* 다운받은 폰트 적용
+ @font-face {
+    font-family: 'nanum';
+    src: url('/css/fonts/NanumBarunGothicBold.eot') format('truetype');
+}
+
+body {
+    font-family: 'nanum';
+}
+*/
+
 * {
     box-sizing: border-box;
 }
@@ -134,22 +176,15 @@ table {
     background-color: aquamarine;
     display: block;
     position: fixed;
-    width: 7%;
+    width: 5%;
     height: 100%;
     border-right: solid rgb(255, 15, 15) 3px;
 }
 
 .board {
-    padding: 0 0 0 7%;
+    padding: 0 0 0 5%;
     height: 100%;
     display: block;
-}
-
-.board .nav {
-    background-color: blueviolet;
-    height: 50px;
-    width: 100%;
-    position: fixed;
 }
 
 .board .content {
@@ -211,7 +246,7 @@ table {
     height: 100%;
     position: relative;
     border-top: solid rgb(255, 15, 15) 3px;
-    font-size: small;
+    font-size: 0.75em;
 }
 
 
@@ -228,3 +263,55 @@ table {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+/* .board .nav {
+    background-color: blueviolet;
+    height: 50px;
+    width: 100%;
+    text-align: right;
+    display: block;
+    position: relative;
+} */
+
+.nav {
+    background-color: blueviolet;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    clear: both;
+    padding: 16px 12px 0px 0px;
+}
+
+.nav .nav_menu {
+    float: right;
+}
+
+.nav .nav_menu li {
+    display: inline-block;
+}
+
+.nav .nav_menu li a {
+    border: solid black 2px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: small;
+    padding: 3px 12px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+
+/* .nav .select_btn {
+    border: solid black 2px;
+    border-radius: 20px;
+    width: 80px;
+    height: 25px;
+    font-size: small;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 15px;
+    position: absolute;
+} */
