@@ -154,34 +154,37 @@ table {
     height: 100%;
 }
 
-#main {
+.board {
     padding: 0 0 0 10%;
     height: 100%;
     display: block;
 }
 
-#main .nav {
+.board .nav {
     background-color: blueviolet;
     height: 50px;
+    width: 100%;
+    display: block;
 }
 
-#main .board {
-    background-color: cornsilk;
+.board .content {
+    background-color: rgb(49, 14, 248);
     height: 100%;
+    width: 100%;
 }
 
-#main footer {
+.board footer {
     height: 250px;
 }
 
-#main footer .f1 {
+.board #fullpage footer .f1 {
     background-color: darkblue;
     float: left;
     width: 50%;
     height: 250px;
 }
 
-#main footer .f2 {
+.board #fullpage footer .f2 {
     background-color: rgb(45, 197, 45);
     float: right;
     width: 50%;
