@@ -1,5 +1,17 @@
 @charset "utf-8";
 
+/* 애니메이션 이름은 slide로 100% 일 때, X축의 위치가 왼쪽으로 4개의 slide-item의 총 합만큼 이동하도록 함 */
+
+@keyframes slide {
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(calc(-500px * 4));
+    }
+}
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
 
 html,
@@ -318,8 +330,8 @@ body {
 
 .content .content_sub {
     float: left;
-    background-color: brown;
-    padding: 5%;
+    /* background-color: brown; */
+    padding: 5% 0% 0% 5%;
 }
 
 
@@ -355,36 +367,43 @@ body {
 }
 
 .content_sub_btn {
-    background-color: red;
+    /* background-color: red;
     width: 172px;
     height: 55px;
     text-align: center;
-    /* display: inline-block; */
+    display: inline-block;
     border-radius: 30px;
+    position: relative; */
     position: relative;
+    text-align: center;
+    height: 100px;
+    width: 100%;
 }
 
 .content_sub_btn>a {
+    background-color: red;
+    /* width: 172px;
+    height: 55px; */
+    border-radius: 30px;
     color: #fff;
     font-size: 17px;
     font-weight: bold;
     text-decoration: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    padding: 24px 85px;
 }
 
 .content_img_1 {
     position: absolute;
     top: 91px;
-    left: 1038px;
+    left: 966px;
 }
 
 .content_img_2 {
     position: absolute;
-    top: 216px;
-    left: 1407px;
+    top: 145px;
+    left: 1354px;
 }
 
 .p {
@@ -399,3 +418,33 @@ body {
     color: #fff;
     display: inline-block;
 } */
+
+
+/* .margin_auto {
+    position: fixed;
+    margin: auto;
+} */
+
+.slider {
+    /* border: 2px solid #2d2d2d; */
+    padding-top: 587px;
+}
+
+.slide-box {
+    display: flex;
+    /* calc() 아이템 개수의 2배만큼 지정해줌 */
+    width: calc(500px * 8);
+    animation: slide 40s linear infinite;
+}
+
+.slide-item {
+    width: 500px;
+    height: 300px;
+    background-color: #ffffff;
+    border: 20px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+    font-size: 24px;
+    color: red;
+    line-height: 100px;
+    text-align: center;
+}
