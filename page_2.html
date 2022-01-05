@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS 설정 -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/page_2.css'>
+    <link rel="stylesheet" type="text/css" href="css/fullPage/jquery.fullPage.css" />
+
+    <!-- script 설정 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="css/fullPage/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="css/fullPage/dist/jquery.fullpage.extensions.min.js"></script>
+    <script type="text/javascript" src="css/fullPage/vendors/scrolloverflow.min.js"></script>
+
+    <!-- 타이틀 -->
+    <title>page_2</title>
+</head>
+
+<body>
+    <div>
+        <div class="menu">
+            <div class="logo">
+                <a href="/menu.html"><img src="/img/애플 로고.jpg"></a>
+            </div>
+            <ul>
+                <li class="menu_s">
+                    <a href="/move.html">
+                        <div class="menu_s_1"><img src="/img/test.gif" alt=""><br>회사소개</div>
+                    </a>
+                </li>
+                <li class="menu_s">
+                    <a href="/move.html">
+                        <div class="menu_s_1"><img src="/img/test.gif" alt=""><br>서비스소개</div>
+                    </a>
+                </li>
+                <li class="menu_s">
+                    <a href="/move.html">
+                        <div class="menu_s_1"><img src="/img/test.gif" alt=""><br>포트폴리오</div>
+                    </a>
+                </li>
+                <li class="menu_s">
+                    <a href="/move.html">
+                        <div class="menu_s_1"><img src="/img/test.gif" alt=""><br>상담문의</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="board">
+            <div id="fullpage">
+                <div class="section">
+                    <div class="nav">
+                        <ul class="nav_menu">
+                            <li>
+                                <a href="move.html">로그인</a>
+                            </li>
+                            <li>
+                                <a href="move.html">회원가입</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="content_sub">
+                            <div class="content_sub_1">
+                                <span>PHP Development </span>
+                                <span class="content_sub_1-2">Company</span>
+                            </div>
+                            <div class="content_sub_2">
+                                <p>기획, 디자인, 퍼블리싱, 개발까지 <br>주식회사 **는 <br>
+                                    <span class="content_sub_1-2"> PHP, MySQL 전문 개발회사</span>입니다.</p>
+                            </div>
+                            <div class="content_sub_3">If you can explain, we can make it <br> 설명할 수 있으면, 만들 수 있습니다.</div>
+                            <div class="content_sub_btn">
+                                <a href="move.html">문의하기</a>
+                            </div>
+                        </div>
+                        <div class="content_img">
+                            <img class="content_img_1" src="/img/2022.png" alt="">
+                            <img class="content_img_2" src="/img/강아지.png" alt="">
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="slide-box">
+                            <!-- 오리지널 -->
+                            <div class="slide-item">item1</div>
+                            <div class="slide-item">item2</div>
+                            <div class="slide-item">item3</div>
+                            <div class="slide-item">item4</div>
+
+                            <!-- 이어서 나오도록 카피 -->
+                            <div class="slide-item">item1</div>
+                            <div class="slide-item">item2</div>
+                            <div class="slide-item">item3</div>
+                            <div class="slide-item">item4</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="margin_auto">
+                        <div class="left_box"><img src="/img/애플 로고.jpg" alt=""></div>
+                        <div class="right_box">
+                            <ul>
+                                <li><span>01</span>
+                                    <p class="tit ">든든하다!</p>
+                                    <p class="txt">아직도 책보면서 주식공부하시나요? <br>분야별 최고의 투자 전문가들의 노하우를 전수합니다.</p>
+                                </li>
+                                <li><span>02</span>
+                                    <p class="tit">완벽하다!</p>
+                                    <p class="txt">더 쉽고, 완벽하게 설명해 드립니다. <br>영상을 보고 난 뒤 한번에 이해되도록 구성되었습니다.</p>
+                                </li>
+                                <li><span>03</span>
+                                    <p class="tit">실전이다!</p>
+                                    <p class="txt">국내주식 2,300여개 종목, 미국주식 6,100여개 종목을 분기별로<br> FM스쿨만이 가지고 있는 알고리즘을 통해 재무분석을 제공합니다.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">Some section3</div>
+                <div class="section">Some section4</div>
+
+                <!-- fp-auto-height : 자동으로 페이지 길이 맞춰줌 -->
+                <div class="section fp-auto-height">
+                    <footer>
+                        <div class="f1">footer1</div>
+                        <div class="f2">footer2</div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            //options
+            autoScrolling: true,
+            scrollHorizontally: true,
+            scrollOverflow: true,
+            sectionsColor: ['#FFCCCC', '#FFFFCC', '#CCFFFF', '#CC99FF'],
+            //마지막페이지에서 첫페이지로 가는 여부
+            loopBottom: true
+        });
+
+        //methods
+        //$.fn.fullpage.setAllowScrolling(false);
+    });
+</script>
+
+</html>
+
+</html>
