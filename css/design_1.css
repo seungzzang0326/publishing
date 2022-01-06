@@ -11,6 +11,9 @@
     }
 }
 
+
+/* 다운받은 폰트 적용 방법 */
+
 @font-face {
     font-family: 'nanum';
     src: url(/css/fonts/NanumBarunGothic.woff) format('woff');
@@ -19,6 +22,21 @@
 body {
     font-family: 'nanum';
 }
+
+
+/* 웹 폰트 적용 방법 */
+
+
+/* @font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SDSamliphopangche_Outline';
+} */
 
 
 /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
@@ -154,42 +172,12 @@ table {
     border-spacing: 0;
 }
 
-
-/* .layout .left{border: 1px solid red; float: left; width: 10%; height: 100%; position: fixed; overflow: hidden;}
-.content{border: 1px solid blue; height: 100%; position: relative;} 
-
-.layout div{ display: table; float: left; border: 1px solid red; height: 100%; width: 100%; position: fixed;}
-*/
-
-
-/* 웹폰트 적용
-@font-face {
-    font-family: 'SDSamliphopangche_Outline';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    font-family: 'SDSamliphopangche_Outline';
-}
-*/
-
-
-/* 다운받은 폰트 적용
- @font-face {
-    font-family: 'nanum';
-    src: url('/css/fonts/NanumBarunGothicBold.eot') format('truetype');
-}
-
-body {
-    font-family: 'nanum';
-}
-*/
-
 * {
     box-sizing: border-box;
 }
+
+
+/* CSS 적용 시작 */
 
 .menu {
     display: block;
@@ -206,10 +194,8 @@ body {
 }
 
 .board .content {
-    /* background-color: rgb(49, 14, 248); */
     width: 100%;
     height: 100%;
-    /* padding-top: 50px; */
     background-image: url("/img/main.jpg");
 }
 
@@ -232,7 +218,7 @@ body {
 }
 
 
-/*
+/* 참고사항 -> 정렬부분
     position: relative (부모)
     position: absolute (자식)
 
@@ -260,14 +246,6 @@ body {
     border-top: solid #a1a1a1 1px;
 }
 
-
-/* .menu_s>a img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
-
 .menu_s .menu_s_1 {
     position: absolute;
     top: 50%;
@@ -291,16 +269,6 @@ body {
     width: 50px;
     height: auto;
 }
-
-
-/* .board .nav {
-    background-color: blueviolet;
-    height: 50px;
-    width: 100%;
-    text-align: right;
-    display: block;
-    position: relative;
-} */
 
 .nav {
     height: 50px;
@@ -329,34 +297,6 @@ body {
     font-weight: 900;
 }
 
-
-/* .nav .select_btn {
-    border: solid black 2px;
-    border-radius: 20px;
-    width: 80px;
-    height: 25px;
-    font-size: small;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding-left: 15px;
-    position: absolute;
-} */
-
-
-/* .content .content_sub {
-    float: left;
-    background-color: brown;
-    padding: 5% 0% 1% 5%;
-} */
-
-
-/* .content .content_img img {
-    position: absolute;
-    top: 130px;
-    left: 1584px;
-} */
-
 .content_sub_1 {
     color: rgb(0, 0, 0);
     font-weight: bold;
@@ -384,13 +324,6 @@ body {
 }
 
 .content_sub_btn {
-    /* background-color: red;
-    width: 172px;
-    height: 55px;
-    text-align: center;
-    display: inline-block;
-    border-radius: 30px;
-    position: relative; */
     position: relative;
     text-align: center;
     height: 100px;
@@ -400,8 +333,6 @@ body {
 
 .content_sub_btn>a {
     background-color: rgb(230, 0, 18);
-    /* width: 172px;
-    height: 55px; */
     border-radius: 30px;
     color: #fff;
     font-size: 17px;
@@ -426,46 +357,29 @@ body {
     height: auto;
 }
 
-
-/* .content_img_1 {
-    position: absolute;
-    top: 107px;
-    left: 933px;
-} */
-
 .p {
     background-color: black;
     padding-top: 620px;
 }
 
-
-/* .content_sub .content_sub_1 {
-    font-size: 1em;
-    font-weight: bold;
-    color: #fff;
-    display: inline-block;
-} */
-
-
-/* .margin_auto {
-    position: fixed;
-    margin: auto;
-} */
-
 .selection>.slider {
-    /* border: 2px solid #2d2d2d; */
-    /* padding-top: 13px; */
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
+
+/* 속도, 아이템 개수 등을 추가할 때 이곳에서 처리함 */
+
 .slide-box {
     display: flex;
-    /* calc() 아이템 개수의 2배만큼 지정해줌 */
+    /* calc() 아이템 개수의 2배만큼 지정해줌 + 이곳에서 수정하면 @에서도 수정 필요함 */
     width: calc(500px * 8);
     animation: slide 40s linear infinite;
 }
+
+
+/* class="slide-itme"에 대학 속성 슬라이드 안에 들어가는 요소 처리는 이곳에서 한다. */
 
 .slide-item {
     width: 500px;
@@ -474,7 +388,7 @@ body {
     border: 20px solid rgb(0, 0, 0);
     box-sizing: border-box;
     font-size: 24px;
-    color: rgb(230, 0, 18);
+    color: rgb(0, 0, 0);
     line-height: 100px;
     text-align: center;
 }
