@@ -196,7 +196,9 @@ table {
 .board .content {
     width: 100%;
     height: 100%;
+    /* 백그라운드 이미지 추가(사진 크기 등 변경할 수 있는 부분 더 알아보기) */
     background-image: url("/img/main.jpg");
+    background-size: cover;
 }
 
 .board footer {
@@ -396,6 +398,7 @@ table {
 .margin_auto {
     margin: auto;
     width: 1521px;
+    height: 100%;
 }
 
 .margin_auto .left_box {
@@ -423,10 +426,13 @@ table {
     width: 38%;
     display: inline-block;
     vertical-align: top;
+    margin-top: 93px;
 }
 
 .margin_auto .right_box li {
     position: relative;
+    width: 200%;
+    background-color: rgba(247, 247, 247, 0.356);
 }
 
 .margin_auto .right_box li div {
@@ -440,22 +446,29 @@ table {
 .margin_auto .right_box li .tit {
     font-size: 23.01px;
     margin-bottom: 11px;
-    font-weight: bold;
+    font-weight: 1000;
 }
 
 .margin_auto .right_box li .txt {
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 21px;
-    /* margin-bottom: 32px; */
-    color: #a1a1a1;
+    color: rgb(34, 34, 34);
 }
 
 .margin_auto .right_box li .border_line::after {
     content: '';
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(8, 8, 8, 0.664);
+    ;
     display: block;
     position: absolute;
-    width: 160%;
+    width: 200%;
     padding-bottom: 90px;
+}
+
+.background {
+    background-image: url("/img/work.jpg");
+    /* 사진을 backgound 사이즈에 맞춤 */
+    background-size: cover;
+    height: 100%;
 }
