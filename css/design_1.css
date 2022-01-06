@@ -230,14 +230,6 @@ body {
     height: 250px;
 }
 
-.menu .logo img {
-    width: auto;
-    height: 50px;
-    padding: 10%;
-    text-align: center;
-    display: block;
-}
-
 
 /*
     position: relative (부모)
@@ -294,6 +286,11 @@ body {
     font-size: 30px;
 }
 
+.menu_s .menu_s_1 img {
+    width: 50px;
+    height: auto;
+}
+
 
 /* .board .nav {
     background-color: blueviolet;
@@ -305,7 +302,6 @@ body {
 } */
 
 .nav {
-    background-color: blueviolet;
     height: 50px;
     width: 100%;
     box-sizing: border-box;
