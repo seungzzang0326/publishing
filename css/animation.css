@@ -412,7 +412,6 @@ table {
 .margin_auto {
     margin: auto;
     width: 1521px;
-    height: 100%;
 }
 
 .margin_auto .left_box {
@@ -438,16 +437,26 @@ table {
 
 .margin_auto .right_box {
     width: 38%;
-    display: inline-block;
     vertical-align: top;
-    margin-top: 93px;
+    margin: 85px 0px;
+    /* dispaly: none을 주어 해당 요소가 맨 처음엔 안보이도록 함
+       그 후, 애니메이션 효과를 주면서 display: inline-block을 주어 나타나도록 함 */
+    display: none;
 }
 
 .margin_auto .right_box li {
     position: relative;
     width: 200%;
     background-color: rgba(247, 247, 247, 0.356);
+}
+
+
+/* css 우선순위 때문에 .margin_auto를 붙여 우선순위를 올려줌
+   -> .argin_auto .right_box 보다 아래에 있어야지 애니메이션이 실행됨(이것도 우선순위 영향) */
+
+.margin_auto .ani {
     animation: fadeInUp 1s;
+    display: inline-block;
 }
 
 .margin_auto .right_box li div {
@@ -481,9 +490,12 @@ table {
     padding-bottom: 90px;
 }
 
-.background {
+
+/* 풀페이지 크기만큼 배경을 적용하고 싶기 때문에 page_2에 css를 줌 */
+
+.page_2 {
     background-image: url("/img/work.jpg");
     /* 사진을 backgound 사이즈에 맞춤 */
     background-size: cover;
-    height: 100%;
+    /* 100vh -> 페이지의 전체 크기를 잡아주는 것(100%는 요소크기만큼 잡아줌)*/
 }

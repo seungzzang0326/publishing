@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <div>
+    <div class="a">
         <!-- 메뉴 시작 -->
         <div class="menu">
             <ul>
@@ -108,11 +108,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="section">
+                <div class="section page_2">
                     <div class="background">
                         <div class="margin_auto">
                             <div class="left_box">
                                 <!-- 만약 이미지를 넣으려면 이렇게 하면 됨 -->
+
                                 <!-- <div class="img_box">
                                     <img src="/img/애플 로고.jpg" alt="">
                                 </div> -->
@@ -165,7 +166,19 @@
             scrollOverflow: true,
             sectionsColor: ['', '', '#0a0a0a'],
             //마지막페이지에서 첫페이지로 가는 여부
-            loopBottom: true
+            loopBottom: true,
+            //페이지가 로드 될 때마다 function을 실행함
+            afterLoad: function(origin, destination, direction) {
+                var loadedSection = this;
+                //만약 loadedSection에 page_2 클래스가 있다면
+                if (loadedSection.hasClass("page_2") == true) {
+                    //애니메이션을 추가해라
+                    $(".right_box").addClass("ani");
+                } else {
+                    //page_2가 없다면 ani를 지워라(페이지로 이동할 때마다 애니메이션을 실행하기 위함)
+                    $(".right_box").removeClass("ani");
+                }
+            }
         });
     });
 </script>
