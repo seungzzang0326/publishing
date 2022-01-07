@@ -1,0 +1,580 @@
+@charset "utf-8";
+
+/* 애니메이션 이름은 slide로 100% 일 때, X축의 위치가 왼쪽으로 4개의 slide-item의 총 합만큼 이동하도록 함 */
+
+@keyframes slide {
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(calc(-500px * 4));
+    }
+}
+
+
+/* Fade Up 되는 애니메이션 */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+
+/* 다운받은 폰트 적용 방법 */
+
+@font-face {
+    font-family: 'nanum';
+    src: url(/css/fonts/NanumBarunGothic.woff) format('woff');
+}
+
+body {
+    font-family: 'nanum';
+}
+
+
+/* 웹 폰트 적용 방법 */
+
+
+/* @font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SDSamliphopangche_Outline';
+} */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* CSS 적용 시작 */
+
+.menu {
+    display: block;
+    position: fixed;
+    width: 100px;
+    height: 100%;
+    border-right: solid #a1a1a1 1px;
+}
+
+.board {
+    padding: 0 0 0 100px;
+    height: 100%;
+    display: block;
+}
+
+.board .content {
+    width: 100%;
+    height: 100%;
+    /* 백그라운드 이미지 추가(사진 크기 등 변경할 수 있는 부분 더 알아보기) */
+    background-image: url("/img/main.jpg");
+    background-size: cover;
+}
+
+
+/* 참고사항 -> 정렬부분
+    position: relative (부모)
+    position: absolute (자식)
+
+    ex) 중앙정렬
+    {relative}>{abso} {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+*/
+
+.menu_s {
+    position: relative;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+}
+
+.menu_s>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-top: solid #a1a1a1 1px;
+}
+
+.menu_s .menu_s_1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(138, 138, 138);
+    width: 99px;
+}
+
+.menu_s .menu_s_1 span {
+    display: block;
+    font-size: 15px;
+    padding-top: 8px;
+}
+
+.menu_s .menu_s_1 i {
+    font-size: 30px;
+}
+
+.menu_s .menu_s_1 img {
+    width: 50px;
+    height: auto;
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    clear: both;
+    padding: 24px 21px 0px 0px;
+}
+
+.nav .nav_menu {
+    text-align: right;
+}
+
+.nav .nav_menu li {
+    display: inline-block;
+}
+
+.nav .nav_menu li a {
+    border: solid black 3px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: small;
+    padding: 3px 12px;
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+.content_sub_1 {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: black solid 1px;
+    width: 219px;
+    padding-top: 53px;
+}
+
+.content_sub_1-2 {
+    color: rgb(230, 0, 18);
+}
+
+.content_sub_2 {
+    font-size: 52px;
+    font-weight: bold;
+    margin: 90px 0px 0px 0px;
+}
+
+.content_sub_3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 19px 0px 89px 0px;
+    color: #969696;
+}
+
+.content_sub_btn {
+    position: relative;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 26px;
+}
+
+.content_sub_btn>a {
+    background-color: rgb(230, 0, 18);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    position: absolute;
+    display: block;
+    padding: 24px 85px;
+}
+
+.right_box .img_box .img_box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.right_box .img_box img {
+    position: relative;
+    top: 38px;
+    left: 66px;
+    width: 749px;
+    height: auto;
+}
+
+.right_box {
+    margin-top: 71px;
+}
+
+.p {
+    background-color: black;
+    padding-top: 620px;
+}
+
+.selection>.slider {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* 속도, 아이템 개수 등을 추가할 때 이곳에서 처리함 */
+
+.slide-box {
+    display: flex;
+    /* calc() 아이템 개수의 2배만큼 지정해줌 + 이곳에서 수정하면 @에서도 수정 필요함 */
+    width: calc(500px * 8);
+    animation: slide 40s linear infinite;
+}
+
+
+/* class="slide-itme"에 대학 속성 슬라이드 안에 들어가는 요소 처리는 이곳에서 한다. */
+
+.slide-item {
+    width: 500px;
+    height: 300px;
+    background-color: #ffffff;
+    border: 20px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    line-height: 100px;
+    text-align: center;
+}
+
+.margin_auto {
+    margin: auto;
+    width: 1521px;
+    height: 100%;
+}
+
+.margin_auto .left_box {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    height: auto;
+}
+
+.margin_auto .left_box .img_box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.margin_auto .left_box img {
+    position: relative;
+    top: 6px;
+    left: -60px;
+    width: 100%;
+}
+
+.margin_auto .right_box {
+    width: 38%;
+    vertical-align: top;
+    /* dispaly: none을 주어 해당 요소가 맨 처음엔 안보이도록 함
+       그 후, 애니메이션 효과를 주면서 display: inline-block을 주어 나타나도록 함 */
+    display: none;
+}
+
+.margin_auto .right_box li {
+    position: relative;
+    width: 200%;
+    background-color: rgba(247, 247, 247, 0.356);
+}
+
+
+/* css 우선순위 때문에 .margin_auto를 붙여 우선순위를 올려줌
+   -> .argin_auto .right_box 보다 아래에 있어야지 애니메이션이 실행됨(이것도 우선순위 영향) */
+
+.margin_auto .ani {
+    animation: fadeInUp 1s;
+    display: inline-block;
+}
+
+.margin_auto .right_box li div {
+    display: block;
+    padding: 90px 0;
+    display: inline-block;
+    position: relative;
+    padding-left: 54px;
+}
+
+.margin_auto .right_box li .tit {
+    font-size: 23.01px;
+    margin-bottom: 11px;
+    font-weight: 1000;
+}
+
+.margin_auto .right_box li .txt {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 21px;
+    color: rgb(34, 34, 34);
+}
+
+.margin_auto .right_box li .border_line::after {
+    content: '';
+    border-bottom: 1px solid rgba(8, 8, 8, 0.664);
+    display: block;
+    position: absolute;
+    width: 200%;
+    padding-bottom: 90px;
+}
+
+
+/* 풀페이지 크기만큼 배경을 적용하고 싶기 때문에 page_2에 css를 줌 */
+
+.page_2 {
+    background-image: url("/img/work.jpg");
+    /* 사진을 backgound 사이즈에 맞춤 */
+    background-size: cover;
+    /* 100vh -> 페이지의 전체 크기를 잡아주는 것(100%는 요소크기만큼 잡아줌)*/
+}
+
+.page_3 {
+    background-color: #1a1b25;
+}
+
+.info {
+    margin-top: 75px;
+    margin-left: 51px;
+    display: block;
+}
+
+.info_sub_1 {
+    color: #fff;
+    font-size: 51px;
+    font-weight: 900;
+    padding-bottom: 16px;
+}
+
+.info_sub_2 {
+    color: #fff;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.level {
+    color: rgb(230, 0, 18);
+    font-size: 15px;
+    font-weight: 700;
+    padding-bottom: 12px;
+}
+
+.tit {
+    font-size: 28px;
+    font-weight: 900;
+    padding-bottom: 12px;
+}
+
+.txt {
+    color: #a1a1a1;
+    font-size: 17px;
+    line-height: 22px;
+}
+
+.cur_box {
+    background-color: #fff;
+    width: 356px;
+    height: 526px;
+    text-align: center;
+    padding: 81px 10px;
+}
+
+.cur_box_wrap {
+    display: inline-flex;
+}
+
+.work_1 {
+    margin-top: 178px;
+}
+
+.work_2 {
+    margin-top: 119px;
+}
+
+.work_3 {
+    margin-top: 60px;
+}
+
+.margin_right {
+    margin-right: 28px;
+    display: none;
+}
+
+
+/* 선택자 1) :last-child 2) :nth-child(3) 3) :first-child */
+
+.margin_right:last-child {
+    /* margin_right에 마지막 자식에 margin-right 0을 주는 것 */
+    margin-right: 0;
+}
+
+footer .f1 {
+    background-color: #e60012;
+    float: left;
+    width: 50%;
+    height: 458px;
+}
+
+footer .f2 {
+    float: right;
+    width: 50%;
+    height: 458px;
+    background-image: url("/img/communication.jpg");
+    background-size: cover;
+}
