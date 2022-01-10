@@ -576,13 +576,6 @@ table {
     padding-top: 106px;
 }
 
-.f2 {
-    background-image: url("/img/communication.jpg");
-    width: 50%;
-    height: 458px;
-    background-size: cover;
-}
-
 .f1 img {
     height: auto;
     width: 88px;
@@ -597,20 +590,80 @@ table {
     letter-spacing: 3px;
 }
 
-.f1 .info_table {
+.f1 .info_f1_table {
     color: #fff;
 }
 
-.info_table .info_tit {
+.info_f1_table .info_f1_tit {
     padding-right: 6px;
     line-height: 56px;
 }
 
-.info_table .info_txt {
+
+/* letter-spacing : 자간 조절
+   line-height : 줄간격 조절
+*/
+
+.info_f1_table .info_f1_txt {
     font-weight: 900;
     letter-spacing: 1px;
 }
 
-.info_table .spacing {
+.info_f1_table .spacing {
     letter-spacing: 26px;
+}
+
+
+/* background img 어둡게 만들기
+   background-blend-mode : multiply
+   background : center/cover 같이 명시하고 rgba를 준다.
+*/
+
+.f2 {
+    background: url('/img/communication.jpg') center/cover, rgba(0, 0, 0, 0.65);
+    background-blend-mode: multiply;
+    width: 50%;
+    height: 458px;
+    padding-left: 92px;
+    padding-top: 106px;
+}
+
+.f2 .info_f2 {
+    color: #fff;
+    font-weight: 900;
+}
+
+.info_f2_tit_sub {
+    color: #e60012;
+    font-size: 24px;
+    letter-spacing: 6px;
+}
+
+.info_f2 .info_f2_tit {
+    color: #959595;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.info_f2_txt {
+    font-size: 30px;
+    margin: 59px 0px;
+}
+
+.info_f2_btn {
+    position: relative;
+    height: 100px;
+    width: 100%;
+}
+
+.info_f2_btn>a {
+    background-color: rgb(230, 0, 18);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    position: absolute;
+    display: block;
+    padding: 18px 42px;
 }
