@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS 설정 -->
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/aro.css'>
+    <link rel="stylesheet" type="text/css" href="/css/fullPage/jquery.fullPage.css" />
+    <!-- font awesome 아이콘 설정 -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- script 설정 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/css/fullPage/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="/css/fullPage/dist/jquery.fullpage.extensions.min.js"></script>
+    <script type="text/javascript" src="/css/fullPage/vendors/scrolloverflow.min.js"></script>
+
+
+    <!-- 타이틀 -->
+    <title>aro</title>
+
+</head>
+
+<body>
+    <div>
+        <div id="fullpage">
+            <!-- 페이지 구성 시 margin auto를 주어서 줌했을 때 요소들이 가운데에 있도록 한다.  -->
+            <div class="section">
+                <div class="page_1">
+                    <!-- 아래 background-img를 같이 주려고 section <div> 안에 넣음  -->
+                    <div class="nav">
+                        <ul>
+                            <li>
+                                <a href="/html//html/move.html">About</a>
+                            </li>
+                            <li>
+                                <a href="/html/move.html">Service</a>
+                            </li>
+                            <li>
+                                <a href="/html/move.html">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="/html/move.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="left_box">
+                            <div class="cont_1">
+                                <span>PHP Development </span>
+                                <span class="cont_red">Company</span>
+                            </div>
+                            <div class="cont_3">
+                                <p>기획, 디자인, 퍼블리싱, 개발까지 <br>주식회사 **는 <br>
+                                    <span class="cont_red"> PHP, MySQL 전문 개발회사</span>입니다.</p>
+                            </div>
+                            <div class="cont_4">If you can explain, we can make it <br> 설명할 수 있으면, 만들 수 있습니다.</div>
+                            <div class="cont_btn">
+                                <a href="/html/move.html">문의하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 메인페이지 하단에 넘어가는 슬라이드 시작 -->
+                <div class="slider">
+                    <div class="slide-box">
+                        <!-- 안에 사진이 들어가도록 수정해야함 -->
+                        <!-- 오리지널 -->
+                        <div class="slide-item">item1</div>
+                        <div class="slide-item">item2</div>
+                        <div class="slide-item">item3</div>
+                        <div class="slide-item">item4</div>
+
+                        <!-- 이어서 나오도록 카피 -->
+                        <div class="slide-item">item1</div>
+                        <div class="slide-item">item2</div>
+                        <div class="slide-item">item3</div>
+                        <div class="slide-item">item4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section page_2">
+                <div class="content">
+                    <div class="right_box">
+                        <ul class="right_ul">
+                            <li>
+                                <div class="cont_1">
+                                    <p class="tit ">01. 원활한 소통!</p>
+                                    <p class="txt">아직도 답변을 기다리시나요? <br> 소통을 전담하는 담당자가 10분 이내 답변드립니다.(24시간)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cont_1">
+                                    <p class="tit">02. 투명한 과정!</p>
+                                    <p class="txt">착수 보고? 중간 보고? 완료 보고? <br> 진행현황을 실시간으로 볼 수 있는 URL을 공유해드립니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cont_1">
+                                    <p class="tit">03. 완벽한 결과!</p>
+                                    <p class="txt">완벽한 결과는 기본 아닌가요? <br> 게다가 클라이언트의 요청이 있다면, 개발소스를 조건없이 드립니다.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section page_3">
+                <!-- 세번째 페이지가 로드되면 menu 색상 반전 +  요소 애니메이션 -->
+                <div class="content">
+                    <div class="tit">
+                        <p class="tit_1">What we are handling.</p>
+                        <p class="tit_2">Responsive Web, PC, Mobile, APP etc.</p>
+                    </div>
+                    <div class="work_box">
+                        <div class="work_1 margin_right">
+                            <div class="work_back">
+                                <img src="/img/test.png" alt="">
+                                <p class="level">WORK 01</p>
+                                <p class="txt_1">솔루션 개발</p>
+                                <p class="txt_2">당신이 원하는<br>프로그램을 빠르게<br>제작해 드리겠습니다.</p>
+                            </div>
+                        </div>
+                        <div class="work_2 margin_right">
+                            <div class="work_back">
+                                <img src="/img/test.png" alt="">
+                                <p class="level">WORK 02</p>
+                                <p class="txt_1">홈페이지 개발</p>
+                                <p class="txt_2">PHP<br>그누보드 CMS를 활용한<br>독립형 홈페이지 제작</p>
+                            </div>
+                        </div>
+                        <div class="work_3 margin_right">
+                            <div class="work_back">
+                                <img src="/img/test.png" alt="">
+                                <p class="level">WORK 03</p>
+                                <p class="txt_1 ">쇼핑몰 개발</p>
+                                <p class="txt_2">PHP<br>그누보드 CMS를 활용한<br>독립형 홈페이지 제작</p>
+                            </div>
+                        </div>
+                        <div class="work_4 margin_right">
+                            <div class="work_back">
+                                <img src="/img/test.png" alt="">
+                                <p class="level">WORK 04</p>
+                                <p class="txt_1">유지보수</p>
+                                <p class="txt_2">하자에 대한<br>무상 유지보수와<br>유상 유지보수로 구분</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- fp-auto-height : 자동으로 페이지 길이 맞춰줌 -->
+            <div class="section page_4 fp-auto-height">
+                <div class="footer">
+                    <div class="f1">
+                        <div class="f1_name"><img src="/img/pngwing.com.png" alt=""> 주식회사 **</div>
+                        <table class="f1_table">
+                            <tr>
+                                <td class="f1_tit spacing">대표</td>
+                                <td class="f1_txt">나진수</td>
+                            </tr>
+                            <tr>
+                                <td class="f1_tit">대표번호</td>
+                                <td class="f1_txt">032-000-0000</td>
+                            </tr>
+                            <tr>
+                                <td class="f1_tit">E-mail</td>
+                                <td class="f1_txt">****@naver.com</td>
+                            </tr>
+                            <tr>
+                                <td class="f1_tit spacing">주소</td>
+                                <td class="f1_txt">인천광역시 남동구 만수동 **번길 *, ***호</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="f2">
+                        <div class="f2_box">
+                            <div class="f2_tit"><span class="f2_tit_sub">[ 아로새기다 ]</span> 마음속에 또렷이 기억하여 두다.</div>
+                            <div class="f2_txt">주식회사 아로는 좋은 개발 서비스로<br>고객의 마음속에 또렷이 기억되게 하겠습니다.</div>
+                            <div class="f2_btn"><a href="/html/move.html">제작의뢰하기</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            //풀페이지 옵션
+            autoScrolling: true,
+            sectionsColor: ['', '', '#1a1b25', '#e60012'],
+            //마지막페이지에서 첫페이지로 가는 여부
+            loopBottom: true,
+            //페이지가 로드 될 때마다 function을 실행함
+            afterLoad: function(origin, destination, direction) {
+                var loadedSection = this;
+                var page_2 = loadedSection.hasClass("page_2");
+                var page_3 = loadedSection.hasClass("page_3");
+                var page_4 = loadedSection.hasClass("page_4");
+                //만약 loadedSection에 page_2 클래스가 있다면
+                if (page_2 == true) {
+                    //애니메이션을 추가해라
+                    $(".right_box").addClass("ani");
+                } else {
+                    //page_2가 없다면 ani를 지워라(페이지로 이동할 때마다 애니메이션을 실행하기 위함)
+                    $(".right_box").removeClass("ani");
+                }
+
+                //page_4는 footer로 요소만큼만 풀페이지로 작동하기 때문에 page_4를 '또는' 으로 잡아줘서 workBox가 보이도록 함
+                if (page_3 == true || page_4 == true) {
+                    $(".work_1").addClass("ani");
+                    $(".work_2").addClass("ani");
+                    $(".work_3").addClass("ani");
+                    $(".work_4").addClass("ani");
+                } else {
+                    $(".work_1").removeClass("ani");
+                    $(".work_2").removeClass("ani");
+                    $(".work_3").removeClass("ani");
+                    $(".work_4").removeClass("ani");
+                }
+
+            }
+        });
+    });
+</script>
+
+</html>
