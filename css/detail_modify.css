@@ -425,45 +425,29 @@ table {
     background-color: #1a1b25;
 }
 
-.info {
-    margin-top: 75px;
-    margin-left: 51px;
+.page_3 .tit {
+    color: #fff;
+    margin-top: 115px;
+    margin-left: 129px;
     display: block;
 }
 
-.info_sub_1 {
-    color: #fff;
+.page_3 .tit_1 {
     font-size: 51px;
     font-weight: 900;
     padding-bottom: 16px;
 }
 
-.info_sub_2 {
-    color: #fff;
+.page_3 .tit_2 {
     font-size: 18px;
     padding-left: 5px;
 }
 
-.level {
-    color: rgb(230, 0, 18);
-    font-size: 15px;
-    font-weight: 700;
-    padding-bottom: 12px;
+.page_3 .work_box {
+    display: inline-flex;
 }
 
-.tit {
-    font-size: 28px;
-    font-weight: 900;
-    padding-bottom: 12px;
-}
-
-.txt {
-    color: #a1a1a1;
-    font-size: 17px;
-    line-height: 22px;
-}
-
-.cur_box {
+.page_3 .work_back {
     background-color: #fff;
     width: 356px;
     height: 526px;
@@ -471,33 +455,53 @@ table {
     padding: 81px 10px;
 }
 
-.cur_box_wrap {
-    display: inline-flex;
+.page_3 .level {
+    color: rgb(230, 0, 18);
+    font-size: 15px;
+    font-weight: 700;
+    padding-bottom: 12px;
 }
 
-.work_1 {
+.page_3 .txt_1 {
+    font-size: 28px;
+    font-weight: 900;
+    padding-bottom: 12px;
+}
+
+.page_3 .txt_2 {
+    color: #a1a1a1;
+    font-size: 17px;
+    line-height: 22px;
+}
+
+.page_3 .work_1 {
     margin-top: 178px;
 }
 
-.work_2 {
+.page_3 .work_2 {
     margin-top: 119px;
 }
 
-.work_3 {
+.page_3 .work_3 {
     margin-top: 60px;
 }
 
-.margin_right {
-    margin-right: 28px;
+.page_3 .margin_right {
+    margin-right: 32px;
     display: none;
 }
 
 
 /* 선택자 1) :last-child 2) :nth-child(3) 3) :first-child */
 
-.margin_right:last-child {
+.page_3 .margin_right:last-child {
     /* margin_right에 마지막 자식에 margin-right 0을 주는 것 */
     margin-right: 0;
+}
+
+.page_3 .ani {
+    animation: fadeInUp 1s;
+    display: inline-block;
 }
 
 
@@ -506,11 +510,11 @@ table {
 
 /* footer 시작 */
 
-.align {
+.footer {
     display: flex;
 }
 
-.f1 {
+.footer .f1 {
     background-color: #e60012;
     width: 50%;
     height: 458px;
@@ -518,12 +522,12 @@ table {
     padding-top: 106px;
 }
 
-.f1 img {
+.footer .f1 img {
     height: auto;
     width: 88px;
 }
 
-.f1 .company_name {
+.footer .f1_name {
     color: #fff;
     font-weight: 600;
     display: flex;
@@ -532,11 +536,11 @@ table {
     letter-spacing: 3px;
 }
 
-.f1 .info_f1_table {
+.footer .f1_table {
     color: #fff;
 }
 
-.info_f1_table .info_f1_tit {
+.footer .f1_tit {
     padding-right: 6px;
     line-height: 56px;
 }
@@ -546,12 +550,12 @@ table {
    line-height : 줄간격 조절
 */
 
-.info_f1_table .info_f1_txt {
+.footer .f1_txt {
     font-weight: 900;
     letter-spacing: 1px;
 }
 
-.info_f1_table .spacing {
+.footer .spacing {
     letter-spacing: 26px;
 }
 
@@ -570,35 +574,29 @@ table {
     padding-top: 106px;
 }
 
-.f2 .info_f2 {
+.footer .f2_box {
     color: #fff;
     font-weight: 900;
 }
 
-.info_f2_tit_sub {
-    color: #e60012;
-    font-size: 24px;
-    letter-spacing: 6px;
-}
-
-.info_f2 .info_f2_tit {
+.footer .f2_tit {
     color: #959595;
     font-size: 20px;
     letter-spacing: 1px;
 }
 
-.info_f2_txt {
+.footer .f2_tit_sub {
+    color: #e60012;
+    font-size: 24px;
+    letter-spacing: 6px;
+}
+
+.footer .f2_txt {
     font-size: 30px;
     margin: 59px 0px;
 }
 
-.info_f2_btn {
-    position: relative;
-    height: 100px;
-    width: 100%;
-}
-
-.info_f2_btn>a {
+.footer .f2_btn>a {
     background-color: rgb(230, 0, 18);
     border-radius: 30px;
     color: #fff;
