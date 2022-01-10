@@ -212,6 +212,12 @@ table {
     height: 100%;
 }
 
+.content {
+    margin: auto;
+    width: 1521px;
+    height: 100%;
+}
+
 
 /* 참고사항 -> 정렬부분
     position: relative (부모)
@@ -264,13 +270,7 @@ table {
 
 /* page_1 - content 시작 */
 
-.page_1 .content {
-    margin: auto;
-    width: 1521px;
-    height: 100%;
-}
-
-.cont_1 {
+.page_1 .cont_1 {
     font-weight: bold;
     padding-bottom: 5px;
     border-bottom: black solid 1px;
@@ -278,24 +278,24 @@ table {
     padding-top: 53px;
 }
 
-.cont_red {
+.page_1 .cont_red {
     color: rgb(230, 0, 18);
 }
 
-.cont_3 {
+.page_1 .cont_3 {
     font-size: 52px;
     font-weight: bold;
     margin: 90px 0px 0px 0px;
 }
 
-.cont_4 {
+.page_1 .cont_4 {
     font-size: 16px;
     font-weight: bold;
     margin: 19px 0px 89px 0px;
     color: #969696;
 }
 
-.cont_btn>a {
+.page_1 .cont_btn>a {
     background-color: rgb(230, 0, 18);
     border-radius: 30px;
     color: #fff;
@@ -309,29 +309,6 @@ table {
 
 
 /* page_1 - content 끝 */
-
-.right_box .img_box .img_box {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.right_box .img_box img {
-    position: relative;
-    top: 38px;
-    left: 66px;
-    width: 749px;
-    height: auto;
-}
-
-.right_box {
-    margin-top: 71px;
-}
-
-.p {
-    background-color: black;
-    padding-top: 620px;
-}
 
 
 /* slider 시작 */
@@ -370,64 +347,8 @@ table {
 
 /* slider 끝 */
 
-.margin_auto {
-    margin: auto;
-    width: 1521px;
-    height: 100%;
-}
 
-.margin_auto .right_box {
-    width: 38%;
-    vertical-align: top;
-    /* dispaly: none을 주어 해당 요소가 맨 처음엔 안보이도록 함
-       그 후, 애니메이션 효과를 주면서 display: inline-block을 주어 나타나도록 함 */
-    display: none;
-}
-
-.margin_auto .right_box li {
-    position: relative;
-    width: 200%;
-    background-color: rgba(247, 247, 247, 0.356);
-}
-
-
-/* css 우선순위 때문에 .margin_auto를 붙여 우선순위를 올려줌
-   -> .argin_auto .right_box 보다 아래에 있어야지 애니메이션이 실행됨(이것도 우선순위 영향) */
-
-.margin_auto .ani {
-    animation: fadeInUp 1s;
-    display: inline-block;
-}
-
-.margin_auto .right_box li div {
-    display: block;
-    padding: 90px 0;
-    display: inline-block;
-    position: relative;
-    padding-left: 54px;
-}
-
-.margin_auto .right_box li .tit {
-    font-size: 23.01px;
-    margin-bottom: 11px;
-    font-weight: 1000;
-}
-
-.margin_auto .right_box li .txt {
-    font-size: 17px;
-    font-weight: 600;
-    line-height: 21px;
-    color: rgb(34, 34, 34);
-}
-
-.margin_auto .right_box li .border_line::after {
-    content: '';
-    border-bottom: 1px solid rgba(8, 8, 8, 0.664);
-    display: block;
-    position: absolute;
-    width: 200%;
-    padding-bottom: 90px;
-}
+/* page_2 - content 시작 */
 
 
 /* 풀페이지 크기만큼 배경을 적용하고 싶기 때문에 page_2에 css를 줌 */
@@ -438,6 +359,67 @@ table {
     background-size: cover;
     /* 100vh -> 페이지의 전체 크기를 잡아주는 것(100%는 요소크기만큼 잡아줌)*/
 }
+
+.page_2 .right_box {
+    width: 50%;
+    vertical-align: top;
+    /* dispaly: none을 주어 해당 요소가 맨 처음엔 안보이도록 함
+       그 후, 애니메이션 효과를 주면서 display: inline-block을 주어 나타나도록 함 */
+    display: none;
+    position: absolute;
+    right: 0;
+    margin: 173px 0px;
+}
+
+
+/* 불투명 배경 */
+
+.page_2 .right_box li {
+    background-color: rgba(247, 247, 247, 0.356);
+}
+
+
+/* css 우선순위 때문에 .margin_auto를 붙여 우선순위를 올려줌
+   -> .content .right_box 보다 아래에 있어야지 애니메이션이 실행됨(이것도 우선순위 영향) */
+
+.page_2 .cont_1 {
+    width: 100%;
+    padding: 54px 0px 0px 88px;
+}
+
+.page_2 .tit {
+    font-size: 23.01px;
+    margin-bottom: 11px;
+    font-weight: 900;
+}
+
+.page_2 .txt {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 21px;
+    color: rgb(34, 34, 34);
+    /* 글자 시작하는 부분부터 border을 주기 위함 */
+    border-bottom: black solid 1px;
+    padding-bottom: 54px;
+}
+
+
+/* 연속적이지 않으므로 li 안에 있는 .txt를 명시해줌 */
+
+.page_2 .right_ul li:last-child .txt {
+    border-bottom: none;
+}
+
+.page_2 .ani {
+    animation: fadeInUp 1s;
+    display: inline-block;
+}
+
+
+/* page_2 - content 끝 */
+
+
+/* page_3 - content 시작 */
 
 .page_3 {
     background-color: #1a1b25;
@@ -517,6 +499,12 @@ table {
     /* margin_right에 마지막 자식에 margin-right 0을 주는 것 */
     margin-right: 0;
 }
+
+
+/* page_3 - content 끝 */
+
+
+/* footer 시작 */
 
 .align {
     display: flex;
@@ -621,3 +609,6 @@ table {
     display: block;
     padding: 18px 42px;
 }
+
+
+/* footer 끝 */
