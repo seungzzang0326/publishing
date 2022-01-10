@@ -362,13 +362,12 @@ table {
 
 .page_2 .right_box {
     width: 50%;
-    vertical-align: top;
     /* dispaly: none을 주어 해당 요소가 맨 처음엔 안보이도록 함
        그 후, 애니메이션 효과를 주면서 display: inline-block을 주어 나타나도록 함 */
     display: none;
     position: absolute;
     right: 0;
-    margin: 173px 0px;
+    margin: 154px 0px;
 }
 
 
@@ -384,7 +383,7 @@ table {
 
 .page_2 .cont_1 {
     width: 100%;
-    padding: 54px 0px 0px 88px;
+    padding: 70px 0px 0px 88px;
 }
 
 .page_2 .tit {
@@ -400,7 +399,7 @@ table {
     color: rgb(34, 34, 34);
     /* 글자 시작하는 부분부터 border을 주기 위함 */
     border-bottom: black solid 1px;
-    padding-bottom: 54px;
+    padding-bottom: 70px;
 }
 
 
@@ -420,10 +419,6 @@ table {
 
 
 /* page_3 - content 시작 */
-
-.page_3 {
-    background-color: #1a1b25;
-}
 
 .page_3 .tit {
     color: #fff;
@@ -515,7 +510,6 @@ table {
 }
 
 .footer .f1 {
-    background-color: #e60012;
     width: 50%;
     height: 458px;
     padding-left: 317px;
